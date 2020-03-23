@@ -11,4 +11,7 @@ package ProgramacionII.Tema3;
  */
 public class NewClass {
 
+pubic NewClass(){
+}
+
 }
