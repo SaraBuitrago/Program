@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.Tema3.Ejercicio4.DNI;
+package ProgramacionII.Tema2.FormasGeometricas;
 
 /**
  *
  * @author Sara Buitrago <sarambj@hotmail.com>
  */
-public class DNIException {
-
+public enum Color {
+    BLANCO, NEGRO, AZUL, ROJO, AMARILLO;
 }

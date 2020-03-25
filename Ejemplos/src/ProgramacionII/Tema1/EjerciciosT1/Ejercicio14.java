@@ -7,7 +7,7 @@
 es o no palíndroma (se lee igual de izquierda a derecha que de derecha a
 izquierda, sin tener en cuenta los espacios en blanco y las mayúsculas). Por
 ejemplo: "dábale arroz a la zorra el abad".*/
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 import ProgramacionII.utilidades.utils;
 

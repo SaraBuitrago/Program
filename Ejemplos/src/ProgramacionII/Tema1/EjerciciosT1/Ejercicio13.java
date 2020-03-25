@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 import ProgramacionII.utilidades.utils;
 

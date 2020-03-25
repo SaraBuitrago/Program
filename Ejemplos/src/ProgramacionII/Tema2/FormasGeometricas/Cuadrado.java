@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.FormasGeometricas;
+package ProgramacionII.Tema2.FormasGeometricas;
 //Los nombres de una clase siempre mayusculas
 //Nombres variables siempre en minuscula
 //Los metodos en minuscula

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 /*Escribir un programa que muestre por consola los mayores números enteros
 que se pueden representar mediante un char, short e int.*/

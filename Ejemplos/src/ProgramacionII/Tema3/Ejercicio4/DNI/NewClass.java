@@ -14,19 +14,12 @@ import java.util.Random;
 public class NewClass {
 
     public static void main(String[] args) {
-        String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        // String letras = "TRWAGMYFPDXBNJZSQVHLCKE";
         Random aleatorio = new Random();
         int numero = aleatorio.nextInt(99999999);
         System.out.println("El numero aleatorio es: " + numero);
 
+        System.out.println(numero + "La letra es: " + calcularLetra(numero));
 
-
-
-    public String calcularLetra(int numero) {
-        int calculo;
-
-        calculo = numero % 23;
-        return;
     }
-}
 }

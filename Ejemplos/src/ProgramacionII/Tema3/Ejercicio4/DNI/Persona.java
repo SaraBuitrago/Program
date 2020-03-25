@@ -18,6 +18,46 @@ public class Persona {
     private float peso;
     private float altura;
 
+    public Persona() {
+        this.nombre = "";
+        this.dni = new DNI();
+        this.edad = 0;
+        this.sexo = sexo.FEMENINO;
+        this.peso = 0;
+        this.altura = 0;
+    }
+//Siempre hay que inicializar todos los atributos
+
+    public Persona(String nombre, int edad, Sexo sexo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.dni = new DNI();
+        this.peso = 0;
+        this.altura = 0;
+
+    }
+
+    //Todos los atributos menos dni por defecto
+    public Persona(String nombre, int edad, Sexo sexo, float peso, float altura) {
+        this.nombre = nombre;
+        this.dni = new DNI();
+        this.edad = edad;
+        this.sexo = sexo;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    //Todos los atributos
+    public Persona(String nombre, DNI dni, int edad, Sexo sexo, float peso, float altura) {
+        this.nombre = nombre;
+        this.dni = dni;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
     //SETTERS   float peso, float altura
     //CON LOS SETTERS ME ESTABLECEN
     public void setNombre(String nombre) {
@@ -32,12 +72,9 @@ public class Persona {
         }
     }
 
-    public void setSexo(Sexo sexo) throws PersonaException {
-        if (this.sexo.equals(sexo.FEMENINO) || (this.sexo.equals(sexo.MASCULINO))) {
-            this.sexo = sexo;
-        } else {
-            throw new PersonaException(PersonaException.SEXO_INVALIDO);
-        }
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+
     }
 
     public void setPeso(float peso) throws PersonaException {
@@ -81,41 +118,6 @@ public class Persona {
 
     public float getAltura() {
         return this.altura;
-    }
-
-    public Persona() {
-        this.nombre = "";
-        this.dni = new DNI();
-        this.edad = 0;
-        this.sexo = sexo.FEMENINO;
-        this.peso = 0;
-        this.altura = 0;
-    }
-
-    public Persona(String nombre, int edad, Sexo sexo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
-
-    }
-
-    //Todos los atributos menos dni por defecto
-    public Persona(String nombre, int edad, Sexo sexo, float peso, float altura) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.altura = altura;
-    }
-
-    //Todos los atributos
-    public Persona(String nombre, DNI dni, int edad, Sexo sexo, float peso, float altura) {
-        this.nombre = nombre;
-        this.dni = dni;
-        this.edad = edad;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.altura = altura;
     }
 
     public float calcularIMC() {

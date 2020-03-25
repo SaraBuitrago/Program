@@ -12,7 +12,6 @@ package ProgramacionII.Tema3.Ejercicio4.DNI;
 public class PersonaException extends Exception {
 
     public static final String EDAD_INVALIDA = "La edad debe ser mayor o igual a 0";
-    public static final String SEXO_INVALIDO = "El sexo no es valido";
     public static final String PESO_INVALIDO = "El peso debe ser mayor a 0";
     public static final String ALTURA_INVALIDA = "La altura debe ser mayor a 0";
     public String mensaje;

@@ -5,7 +5,7 @@
  */
  /*Escribe un programa que lea un número entero de teclado y lo descomponga
 en factores primos; por ejemplo 40 = 2 * 2 * 2 * 5.*/
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 import ProgramacionII.utilidades.utils;
 

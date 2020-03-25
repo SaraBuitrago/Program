@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 /*Escribe un programa que muestre por pantalla la lista de los 100 primeros
 números primos.*/

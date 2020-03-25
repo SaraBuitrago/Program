@@ -6,7 +6,7 @@
  /*Escribe un programa que calcule el mínimo y el máximo de una lista de
 números enteros positivos introducidos por el usuario. La lista finalizará
 cuando se introduzca un número negativo.*/
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 import java.io.BufferedReader;
 import java.io.IOException;

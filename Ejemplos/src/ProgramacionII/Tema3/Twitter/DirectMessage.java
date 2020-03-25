@@ -11,11 +11,21 @@ package ProgramacionII.Tema3.Twitter;
  */
 public class DirectMessage extends Tweet {
 
-    private UserAcount receiver;
+    private UserAccount receiver;
 
-    public DirectMessage(String message, UserAcount sender, UserAcount receiver) throws MessageException {
+    public DirectMessage(String message, UserAccount sender, UserAccount receiver) throws MessageException {
+        //Utilizo el constructor del padre
         super(message, sender);
+        //Añado el atributo que no está en el padre
         this.receiver = receiver;
+    }
+
+    public DirectMessage(String message, UserAccount receiver) throws MessageException {
+        //Del constructor DirectMessage(String message, UserAccount sender, UserAccount receiver)
+        //Pongo null sender.
+        //Reutilizo el constructor con this();
+        this(message, null, receiver);
+
     }
 
     @Override

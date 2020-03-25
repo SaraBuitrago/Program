@@ -10,7 +10,7 @@ tiene una hora y el número de segundos que tiene un minuto. Emplear las
 variables que ocupen el mínimo espacio de memoria posible. A continuación,
 calcular el número de segundos que tiene un año y almacenar el valor del
 cálculo en otra variable.*/
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 /**
  *

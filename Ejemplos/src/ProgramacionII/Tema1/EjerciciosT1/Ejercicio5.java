@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 /*Escribe un programa que visualice por pantalla la tabla de multiplicar de los
 10 primeros números naturales.*/

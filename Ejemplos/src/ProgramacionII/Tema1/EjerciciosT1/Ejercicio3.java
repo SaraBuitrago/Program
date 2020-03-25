@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ProgramacionII.EjerciciosT1;
+package ProgramacionII.Tema1.EjerciciosT1;
 
 /*Calcular la suma de todos los múltiplos de 5 comprendidos entre 1 y 100.
 Calcular además cuantos hay y visualizar cada uno de ellos.*/

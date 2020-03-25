@@ -11,4 +11,10 @@ package ProgramacionII.Tema3.Twitter;
  */
 public class Email {
 
+    private String email;
+
+    public Email(String email) {
+        this.email = email;
+    }
+
 }
