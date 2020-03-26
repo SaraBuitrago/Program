@@ -15,24 +15,20 @@ public class DNI {
 
     private int numero;
     private char letra;
-    private String numLetra;
 
     public DNI() {
         Random aleatorio = new Random();
         int numero = aleatorio.nextInt(99999999);
-        calcularLetra(letra);
+        this.letra = calcularLetra(numero);
     }
 
     public DNI(int numero) throws DniException {
-        if (this.numero < 0 || this.numero > 99999999) {
-            throw new DniException(DniException.NUMERO_INVALIDO);
-        }
+        comprobarNumero(numero);
         this.numero = numero;
-        calcularLetra(numero);
-
+        this.letra = calcularLetra(numero);
     }
 
-    //Lo que mete el usuario
+//Lo que mete el usuario
     public DNI(int numero, char letra) throws DniException {
         comprobarNumero(numero);
         comprobarLetra(numero, letra);

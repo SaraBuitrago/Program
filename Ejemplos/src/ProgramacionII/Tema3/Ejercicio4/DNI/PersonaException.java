@@ -14,16 +14,8 @@ public class PersonaException extends Exception {
     public static final String EDAD_INVALIDA = "La edad debe ser mayor o igual a 0";
     public static final String PESO_INVALIDO = "El peso debe ser mayor a 0";
     public static final String ALTURA_INVALIDA = "La altura debe ser mayor a 0";
-    public String mensaje;
 
     public PersonaException(String mensaje) {
-        super();
-        this.mensaje = mensaje;
-
-    }
-
-    @Override
-    public String toString() {
-        return "PersonaException ERROR: " + mensaje;
+        super(mensaje);
     }
 }

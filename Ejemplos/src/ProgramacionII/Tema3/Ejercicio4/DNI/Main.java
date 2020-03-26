@@ -16,26 +16,24 @@ public class Main {
 
     public static void main(String[] args) {
 //Pedir por teclado el nombre, la edad, el sexo, el peso y la altura
-        List<Persona> personas;
+        List<Persona> personas = new ArrayList();
 
         String nombre = utils.leerString();
         int edad = utils.leerEntero();
-        Sexo sexo;
-        float peso = utils.leerDouble();
-        float altura = utils.leerDouble();
+        Sexo sexo = utils.leerSexo();
+        float peso = utils.leerFloat();
+        float altura = utils.leerFloat();
+
+        float altura2 = utils.leerFloat();
 
         //Crear 3 objetos de la clase persona
-        Persona personas1 = new Persona();
-        Persona personas2 = new Persona();
-        Persona personas3 = new Persona();
-
         //El primer objeto obtendrá las variables pedidas por teclado
-        personas1(nombre, edad, sexo, peso, altura);
-        //El segundo objeto obtendrá las variables pedidas excepto peso y altura que es por defecto
+        Persona personas1 = new Persona(nombre, edad, sexo, peso, altura);
 
-        persona2(nombre, edad, sexo, peso, altura2);
-
-        Persona persona3 = new Persona();
+        //Volver a pedir datos al usuario.
+//El segundo objeto obtendrá las variables pedidas excepto peso y altura que es por defecto
+        Persona personas2 = new Persona(nombre, edad, sexo, peso, altura2);
+        Persona personas3 = new Persona();
 
     }
 }
