@@ -41,6 +41,31 @@ public class utils {
 
     }
 
+    public static int leerDouble() {
+        //Variable que le ponemos las iniciales del elemento
+        InputStreamReader isr = null;
+        BufferedReader consola = null;
+        double resultado = 0;
+        boolean salir = false;
+        while (!salir) {
+            try {
+                isr = new InputStreamReader(System.in);
+                consola = new BufferedReader(isr);
+                //Para que funcione lo de consola. tiene que compilar todo el codigo anterior
+                System.out.println("Introduzca un numero:");
+                String comando = consola.readLine();
+                resultado = Double.parseDouble(comando);
+                salir = true;
+                //Exception e: Cuando haya cualquier excepcion
+            } catch (Exception e) {
+                System.out.println("Error. Debe introducir un numero. \n");
+            }
+        }
+
+        return resultado;
+
+    }
+
     public static String leerString() {
         //Variable que le ponemos las iniciales del elemento
         InputStreamReader isr = null;

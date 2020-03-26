@@ -43,12 +43,18 @@ public class DNI {
 
     public DNI(String numLetra) throws DniException {
         if (numLetra.length() > 9) {
-            throw new DniException(DniException.NUMERO_INVALIDO);
+            throw new DniException(DniException.LONGITUD_INVALIDA);
         } else {
-            int numeroDni = Integer.parseInt(numLetra);
+            //Cojo desde la posición 0 hasta una posición menos del último caracter
+            String numero = numLetra.substring(0, numLetra.length() - 1);
+            //Convierto String en entero
+            int numeroDni = Integer.parseInt(numero);
+            /*charAt devuelve el caracter de una cadena, se pone length -1 porque si fuera length
+            se saldria de la cadena*/
+            char letraDni = numLetra.charAt(numLetra.length());
+
         }
 
-        this.letra = letra;
         //charAt
         //Extraer que ultimo caracter sea letra
         //parseInt
