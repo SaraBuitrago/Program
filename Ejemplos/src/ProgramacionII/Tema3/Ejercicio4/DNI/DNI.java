@@ -41,20 +41,23 @@ public class DNI {
         if (numLetra.length() > 9) {
             throw new DniException(DniException.LONGITUD_INVALIDA);
         } else {
-            //Cojo desde la posición 0 hasta una posición menos del último caracter
+            //Cojo desde el primer caracter que quiero extraer hasta primer caracter que ya no deseo extraer
             String numero = numLetra.substring(0, numLetra.length() - 1);
             //Convierto String en entero
-            int numeroDni = Integer.parseInt(numero);
+            int numeroDni = 0;
+            try {
+                numeroDni = Integer.parseInt(numero);
+            } catch (Exception ex) {
+                throw new DniException(DniException.NUMERO_INVALIDO);
+            }
+
             /*charAt devuelve el caracter de una cadena, se pone length -1 porque si fuera length
             se saldria de la cadena*/
             char letraDni = numLetra.charAt(numLetra.length());
-
+            comprobarNumero(numeroDni);
+            comprobarLetra(numeroDni, letraDni);
         }
 
-        //charAt
-        //Extraer que ultimo caracter sea letra
-        //parseInt
-        //Comprobar que numero y letra sean compatibles
     }
 
     public char calcularLetra(int numero) {
@@ -138,37 +141,24 @@ public class DNI {
     }
 //Compruebo si la letra introducida por el usuario es correcta.
 
-    public char comprobarLetra(int numero, char letra) throws DniException {
+    public void comprobarLetra(int numero, char letra) throws DniException {
         if (letra != calcularLetra(numero)) {
             throw new DniException(DniException.LETRA_INVALIDA);
-        } else {
-            return letra;
         }
     }
 //Compruebo si el numero metido por el usuario es correcto
 
-    public int comprobarNumero(int numero) throws DniException {
+    public void comprobarNumero(int numero) throws DniException {
         if (numero < 0 || numero > 99999999) {
             throw new DniException(DniException.NUMERO_INVALIDO);
-        } else {
-            comprobarLetra(numero, letra);
-            return numero;
         }
+
     }
 
     @Override
 
     public String toString() {
-        return "Dni: numero = " + this.numero + ", letra = " + this.letra;
-    }
-
-    public static void main(String[] args) throws DniException {
-        //Son ejemplos.
-
-        DNI dni1 = new DNI();
-
-        System.out.println("DNI1: " + dni1);
-
+        return "" + this.numero + "" + this.letra;
     }
 
 }

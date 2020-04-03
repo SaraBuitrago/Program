@@ -1,7 +1,5 @@
 package ProgramacionII.Tema3.Ejercicio5;
 
-import java.util.Random;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -42,29 +40,22 @@ public class Password {
                 //Pregunta si la letra en la posición i es minuscula.
             } else if (Character.isLowerCase(contraseña.charAt(i))) {
                 minusculas++;
-            } else {
+            } else if (Character.isDigit(contraseña.charAt(i))) {
                 numeros++;
             }
         }
-        if (numeros > 5 && mayusculas > 2 && minusculas > 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return (numeros > 5 && mayusculas > 2 && minusculas > 1);
     }
 
-//??
     public String generarPassword() {
         //La contraseña generada se guardará en password
         String password = "";
-        String minusculas = "qwertyuiopasdfghjklñzxcvbnm";
-        String mayusculas = "QWERTYUIOPASDFGHJKLÑZXCVBNM";
-        String numeros = "1234567890";
+        //  String todo = "!\"#$%&'()*+,-./0123456789:=?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 
-        Random aleatorio = new Random();
-
+        //Numero aleaotorio entre 0 y 127
         for (int i = 0; i < this.longitud; i++) {
-
+            int todo = (int) (Math.random() * 0 - 127) + 127;
+            password += (char) todo;
         }
 
         return password;
@@ -80,8 +71,13 @@ public class Password {
     }
 
     //Con los setters se establece información
-    public void setLongitud(int longitud) {
+    public void setLongitud(int longitud) throws PasswordException {
+        if (this.longitud < 8) {
+            throw new PasswordException(PasswordException.LONGITUD_INCORRECTA);
+        }
         this.longitud = longitud;
+        this.contraseña = this.generarPassword();
 
     }
+
 }

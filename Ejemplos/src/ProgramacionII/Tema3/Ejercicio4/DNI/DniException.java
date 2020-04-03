@@ -15,16 +15,9 @@ public class DniException extends Exception {
     public static final String LETRA_INVALIDA = "La letra es invalida";
     public static final String LONGITUD_INVALIDA = "La longitud debe ser de 9 digitos";
 
-    public String mensaje;
-
     public DniException(String mensaje) {
-        super();
-        this.mensaje = mensaje;
+        super(mensaje);
 
     }
 
-    @Override
-    public String toString() {
-        return "DNIException ERROR: " + mensaje;
-    }
 }

@@ -78,19 +78,20 @@ public class Persona {
     }
 
     public void setPeso(float peso) throws PersonaException {
-        if (this.peso > 0) {
-            this.peso = peso;
-        } else {
+        if (this.peso < 40 || this.peso > 350) {
             throw new PersonaException(PersonaException.PESO_INVALIDO);
 
+        } else {
+            this.peso = peso;
         }
     }
 
     public void setAltura(float altura) throws PersonaException {
-        if (this.altura > 0) {
-            this.altura = altura;
-        } else {
+        if (this.altura < 1.40 || 3.00 >= this.altura) {
             throw new PersonaException(PersonaException.ALTURA_INVALIDA);
+
+        } else {
+            this.altura = altura;
         }
     }
 
@@ -137,9 +138,9 @@ public class Persona {
     public boolean esMayorDeEdad() {
 
         /**
-         * if (this.edad > 18) { return true; } else { return false;
-        }
+         * if (this.edad > 18) { return true; } else { return false; }
          */
+        //Devuelve directamente true or false
         return this.edad > 18;
     }
 

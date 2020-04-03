@@ -19,10 +19,10 @@ public class Ejercicio03 {
     }
 
     public static Racional leerRacional() {
-        System.out.println("Introduzca el numerador del racional: ");
-        int numerador = utils.leerEntero();
-        System.out.println("Introduzca el denominador del racional: ");
-        int denominador = utils.leerEntero();
+
+        int numerador = utils.leerEntero("Introduzca el numerador del racional: ");
+
+        int denominador = utils.leerEntero("Introduzca el denominador del racional: ");
         return new Racional(numerador, denominador);
     }
 
@@ -41,8 +41,8 @@ public class Ejercicio03 {
             System.out.println("3. Simplificar dos racionales");
             System.out.println("4. Salir de la calculadora");
             System.out.println("\n\n");
-            System.out.println("Elige una opcion");
-            int opcion = utils.leerEntero();
+
+            int opcion = utils.leerEntero("Elige una opcion");
 
             switch (opcion) {
                 case 1:
