@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//Tiene que llevar mi nombre en alguna parte sbuitrago
+//El repositorio tiene que ser privado
 package harrypotter;
 
 /**
