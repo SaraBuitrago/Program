@@ -16,7 +16,7 @@ import ProgramacionII.utilidades.utils;
 public class Ejercicio7 {
 
     public static void main(String[] args) {
-        int numero = utils.leerEntero();
+        int numero = utils.leerEntero("Numero:");
 
         int resultado = numero;
         int i = 2;

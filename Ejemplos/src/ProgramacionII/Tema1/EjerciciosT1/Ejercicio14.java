@@ -19,7 +19,7 @@ public class Ejercicio14 {
 
     public static void main(String[] args) {
 
-        String palabra = utils.leerString();
+        String palabra = utils.leerString("Introduzca cadena: ");
         String resultado = "";
 
         //Para reemplazar los espacios por no espacio

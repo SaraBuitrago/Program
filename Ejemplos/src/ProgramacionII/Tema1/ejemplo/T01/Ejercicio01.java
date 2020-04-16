@@ -15,6 +15,6 @@ import ProgramacionII.utilidades.utils;
 public class Ejercicio01 {
 
     public static void main(String[] args) {
-        int enteroLeido = utils.leerEntero();
+        int enteroLeido = utils.leerEntero("Introduzca numero");
     }
 }

@@ -15,7 +15,7 @@ public class Ejercicio12 {
 
     public static void main(String[] args) {
 
-        String frase = utils.leerString();
+        String frase = utils.leerString("Introduzca cadena");
         int vocal = 0;
 
         for (int i = 0; i < frase.length(); i++) {

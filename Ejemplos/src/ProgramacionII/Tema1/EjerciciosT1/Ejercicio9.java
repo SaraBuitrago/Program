@@ -19,18 +19,18 @@ public class Ejercicio9 {
 
         System.out.println("Introduzca numero de elementos: ");
         //Me sale introduzca numero porque la funcion leerEntero tiene un println de leer numero
-        int elementos = utils.leerEntero();
+        int elementos = utils.leerEntero("Numero:");
 
         System.out.println("Introduzca primer vector");
         for (int i = 0; i <= elementos; i++) {
             System.out.println(i + " Introduzca numero: ");
-            int numero = utils.leerEntero();
+            int numero = utils.leerEntero("Numero:");
         }
         System.out.println("Introduzca segundo vector");
 
         for (int i = 0; i <= elementos; i++) {
             System.out.println(i + " Introduzca numero: ");
-            int numero = utils.leerEntero();
+            int numero = utils.leerEntero("Numero:");
         }
     }
 }

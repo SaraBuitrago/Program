@@ -21,8 +21,14 @@ public class Agenda {
     }
 //Añadir contacto nuevo
 
-    public void addContacto(Contacto contacto) {
-        this.contactos.add(contacto);
+    public void addContacto(Contacto contac) throws AgendaException {
+        if (existeContacto(contactos, contac)) {
+            //Aquí compruebo que si el contacto existe, lanzo la excepcion
+            throw new AgendaException(AgendaException.NOMBRE_REPETIDO);
+        } else {
+            this.contactos.add(contac);
+        }
+
     }
 //Listar contactos
 
@@ -33,4 +39,13 @@ public class Agenda {
     }
 //Contacto existe
 
+    public boolean existeContacto(List<Contacto> contactos, Contacto cont) throws AgendaException {
+        for (int i = 0; i < contactos.size() - 1; i++) {
+            if (contactos.get(i).equals(cont)) {
+                return true;
+            }
+        }
+        return false;
+
+    }
 }

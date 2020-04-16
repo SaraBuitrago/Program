@@ -17,7 +17,7 @@ public class Ejercicio13 {
 
     public static void main(String[] args) {
 
-        String palabra = utils.leerString();
+        String palabra = utils.leerString("Introduzca cadena: ");
         String resultado = "";
 
         for (int i = palabra.length() - 1; i >= 0; i--) {
